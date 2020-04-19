@@ -16,7 +16,7 @@ class OnlineSuTs:
         assert(parent.isBot())
         assert(dispatcher!=None)
         self.config = json.load(open("resources/config.json"))
-        self.group_id = self.config["group_id"]
+        self.group_id = int(self.config["group_id"])
         # get a list of TeamSpeak nicknames to ignore
         # !! the names are space-separated in the json file !!
         self.ts_names_to_discard = self.config["ts_names_to_discard"].split()
@@ -59,7 +59,7 @@ class OnlineSuTs:
 
         # Send the list of connected users only if the command 
         # is launched from a specific group
-        if (chat_id == self.group_id):
+        if chat_id == self.group_id:
             text = ":sound: *Online adesso su TS* :sound:\n" + "\n".join(list_of_users)
             context.bot.send_message(chat_id=chat_id, 
                         text=emojize(text, use_aliases=True),

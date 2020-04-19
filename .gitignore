@@ -1,6 +1,6 @@
 persistence
 resources
 images
-requirements.txt
+src/dancan_msgs.txt
 
 *.pyc
