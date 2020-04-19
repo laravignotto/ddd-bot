@@ -14,6 +14,7 @@ from PIL import ImageDraw, ImageFont
 import logging
 import textwrap
 import random 
+import ts3
 
 # bot apis
 from src.Start import Start
@@ -21,6 +22,7 @@ from src.Help import Help
 from src.Dancanize import Dancanize
 from src.AutoRespond import AutoRespond
 from src.DancanText import DancanText
+from src.OnlineSuTs import OnlineSuTs
 
 
 class Bot:
@@ -58,6 +60,9 @@ class Bot:
 
         dancantext = DancanText(self, dp)
         dancantext.registerToDispatcher()
+
+        onlinesuts = OnlineSuTs(self, dp)
+        onlinesuts.registerToDispatcher()
 
         self.enableLogging()
 

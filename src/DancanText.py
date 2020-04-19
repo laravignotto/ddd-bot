@@ -31,7 +31,7 @@ class DancanText:
             pass
 
         context.bot.send_message(chat_id=chat_id, 
-                    text=emojize(":crystal_ball: Dancan dice: :crystal_ball:\n" + text, use_aliases=True),
+                    text=emojize(":crystal_ball: *Dancan dice* :crystal_ball:\n" + text, use_aliases=True),
                     parse_mode=telegram.ParseMode.MARKDOWN,
                     )
 

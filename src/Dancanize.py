@@ -84,4 +84,3 @@ class Dancanize:
 
     def registerToDispatcher(self):
         self.dp.add_handler(CommandHandler('dancanize', self.dancanize))
-
